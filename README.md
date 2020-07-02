@@ -11,3 +11,5 @@ http://localhost:8081/getPersonScoreByGroup/PF
 3)URL do monitor
 http://localhost:8081/hystrix
 -Entrar como http://localhost:8081/actuator/hystrix.stream
+
+/docs do hystrix command : https://github.com/Netflix/Hystrix/wiki/Configuration#execution.timeout.enabled
