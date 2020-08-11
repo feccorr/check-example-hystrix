@@ -49,7 +49,7 @@ public class PersonScoreController {
 	        List<Person> personList = personDB.get(groupname);
 	        if (personList == null) {
 	            personList = new ArrayList<Person>();
-	            Person std = new Person("Not Found", "N/A");
+	            Person std = new Person("Não encontrado", "N/A");
 	            personList.add(std);
 	        }
 	        return personList;

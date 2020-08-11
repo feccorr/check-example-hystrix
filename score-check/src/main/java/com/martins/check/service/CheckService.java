@@ -18,9 +18,7 @@ public class CheckService {
 	@Autowired
     RestTemplate restTemplate;
 
-	@HystrixCommand(fallbackMethod = "callPersonServiceFallBack", commandProperties = {
-		     @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "12000")  // Nesse exemplo o REST Template, ira aguardar 12000ms, ate executaro fallback
-	})
+	@HystrixCommand(fallbackMethod = "callPersonServiceFallBack")
 	    public String checkPersonScore(String groupname) {
 	 
 		 System.out.println("Getting Person details for " + groupname);
@@ -34,8 +32,7 @@ public class CheckService {
 	 
 	        System.out.println("Response Received as " + response + " -  " + new Date());
 	 
-	        return "NORMAL FLOW !!! - Group Name -  " + groupname + " :::  " +
-	                    " Person Details " + response + " -  " + new Date();
+	        return "NORMAL FLOW !!! - Group Name -  " + groupname + " :::  " + " Person Details " + response + " -  " + new Date();
 	    }
 	 
 	 
@@ -43,8 +40,7 @@ public class CheckService {
 		 
 	        System.out.println("Person Service is down!!! fallback route enabled...");
 
-	        return "CIRCUIT BREAKER ENABLED!!! No Response From Person Service at this moment. " +
-	                    " Service will be back shortly - " + new Date();
+	        return "CIRCUIT BREAKER ENABLED!!! No Response From Person Service at this moment. " + " Service will be back shortly - " + new Date();
 	    }
 	 
 	   @Bean
