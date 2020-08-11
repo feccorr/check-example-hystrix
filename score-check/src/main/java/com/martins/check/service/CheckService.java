@@ -40,7 +40,7 @@ public class CheckService {
 		 
 	        System.out.println("Person Service is down!!! fallback route enabled...");
 
-	        return "CIRCUIT BREAKER ENABLED!!! No Response From Person Service at this moment. " + " Service will be back shortly - " + new Date();
+	        return "CIRCUIT BREAKER ENABLED!!! No Response From Person Service at this moment. " + " Service will be back shortly  - " + new Date();
 	    }
 	 
 	   @Bean

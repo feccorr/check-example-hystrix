@@ -37,6 +37,8 @@ public class PersonScoreController {
 	        lst.add(std);
 	        std = new Person("Arnold", "4.8");
 	        lst.add(std);
+			std = new Person("Bitcoin", "5.0");
+			lst.add(std);
 	 
 	      personDB.put("PF", lst);
 	 
