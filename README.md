@@ -1,5 +1,6 @@
 # Score-example-hystrix
  example-hystrix
+ 
 
 
 1) URL do projeto que gera o score : 
